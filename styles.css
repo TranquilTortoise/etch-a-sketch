@@ -10,33 +10,48 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
+    align-items: center;
+    height: 90vh;
 }
 
 .title {
-    text-align: center;
+    margin-bottom: 30px;
 }
 
 .container {
-    outline: solid 3px purple;
     height: auto;
-    width: auto;
+    max-width: 5fr;
+    outline: solid black 3px;
     display: flex;
     flex-direction: column;
-    flex-grow: 0;
-    padding: 15px;
 }
 
 .row {
     background-color: white;
+    width: 960px;
     display: flex;
-    outline: dotted 2px blue;
     flex-grow: 0;
 }
 
-.square{ 
-    outline: solid yellow 2px;
-    height: 20px;
-    width: 20px;
+.square { 
+    outline: solid rgb(0,0,0,.7) 1px;
+    height: 60px;
+    width: 60px;
     flex-shrink: 0;
+}
+
+.btn-container {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+}
+
+button {
+    font-size: 24px;
+    padding: 8px;
+    width: 100px;
+    border-radius: 16px;
+    background-color: purple;
+    color: greenyellow;
+    outline: solid greenyellow 3px;
 }
