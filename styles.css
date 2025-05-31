@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 5px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.title {
+    text-align: center;
+}
+
+.container {
+    outline: solid 3px purple;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    padding: 15px;
+}
+
+.row {
+    background-color: white;
+    display: flex;
+    outline: dotted 2px blue;
+    flex-grow: 0;
+}
+
+.square{ 
+    outline: solid yellow 2px;
+    height: 20px;
+    width: 20px;
+    flex-shrink: 0;
+}
