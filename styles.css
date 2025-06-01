@@ -15,12 +15,11 @@ body {
 }
 
 .title {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .container {
     height: auto;
-    max-width: 5fr;
     outline: solid black 3px;
     display: flex;
     flex-direction: column;
@@ -28,15 +27,12 @@ body {
 
 .row {
     background-color: white;
-    width: 960px;
     display: flex;
     flex-grow: 0;
 }
 
 .square { 
-    outline: solid rgb(0,0,0,.7) 1px;
-    height: 60px;
-    width: 60px;
+    outline: 1px solid rgb(0, 0, 0, 0.5);
     flex-shrink: 0;
 }
 
