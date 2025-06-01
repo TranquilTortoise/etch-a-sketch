@@ -4,12 +4,13 @@ let GRID_SIZE = 16;
 
 const container = document.querySelector(".container");
 
+
+
 // Executable
 createGrid(ROW_WIDTH, GRID_SIZE);
 
 // Functions
 
-// create grid
 function createGrid(ROW_WIDTH, GRID_SIZE) {
     for (let i = 0; i < GRID_SIZE; i++) {
 
@@ -24,20 +25,24 @@ function createGrid(ROW_WIDTH, GRID_SIZE) {
             // create squares
             const square = document.createElement("div");
             square.setAttribute("class", "square");
-            square.setAttribute(`style`, `width: ${ROW_WIDTH / GRID_SIZE}px; height: ${ROW_WIDTH / GRID_SIZE}px;`);
+            square.setAttribute(`style`, 
+                `width: ${ROW_WIDTH / GRID_SIZE}px; 
+                height: ${ROW_WIDTH / GRID_SIZE}px;`);
             row.appendChild(square);
         }
     }
+    
+    const squares = document.querySelectorAll(".square");
+    
+    squares.forEach((square) => {
+        // paint square on mouseover
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = "purple";
+        })
+    });
 }
 
-const squares = document.querySelectorAll(".square");
 
-squares.forEach((square) => {
-    // paint square on mouseover
-    square.addEventListener('mouseover', () => {
-        square.style.backgroundColor = "purple";
-    })
-});
     
 // reset background on squares when btn clicked
 const resetBtn = document.querySelector(".reset-btn");
@@ -51,6 +56,6 @@ resetBtn.addEventListener('click', () => {
 // prompt user for new grid when btn clicked
 const newGridBtn = document.querySelector(".new-grid-btn");
 
-newGridBtn.addEventListener('click', () => {
-
-})
+/*newGridBtn.addEventListener('click', (ROW_WIDTH, userInput) => {
+    
+}) */
